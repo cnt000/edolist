@@ -18,16 +18,16 @@
   </div>
 </template>
 <script>
-  export default {
-    data () {
-      return {
-        spot: null
-      }
-    },
-    mounted () {
-      this.spot = this.$route.params.picture
+export default {
+  data () {
+    return {
+      spot: null
     }
+  },
+  mounted () {
+    this.spot = this.$route.params.picture
   }
+}
 </script>
 <style scoped>
 .picture > img {

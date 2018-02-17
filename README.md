@@ -15,7 +15,8 @@ npm run dev
 npm run build
 (serve dist -p 8080)
 ./ngrok http 8080
-
+-
+surge dist edolist.surge.sh
 # build for production and view the bundle analyzer report
 npm run build --report
 

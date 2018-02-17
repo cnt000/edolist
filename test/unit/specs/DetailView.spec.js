@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import DetailView from '@/components/DetailView'
+import CameraView from '@/components/CameraView'
 
-describe('DetailView.vue', () => {
+describe('CameraView.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(DetailView)
+    const Constructor = Vue.extend(CameraView)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.comment span').textContent)
-      .to.exist()
+    expect(vm.$el.querySelector('.camera-modal i.material-icons').textContent)
+      .to.equal('camera')
   })
 })
