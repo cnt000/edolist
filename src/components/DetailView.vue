@@ -2,15 +2,12 @@
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--8-col">
       <div class="picture">
-        <img :src="cat.url" />
-      </div>
-      <div class="info">
-        <span>{{ cat.info }}</span>
+        <img :src="spot.url" />
       </div>
     </div>
     <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
       <div class="comment">
-        <span>{{ cat.comment }}</span>
+        <span>{{ spot.comment }}</span>
       </div>
       <div class="actions">
         <router-link class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" to="/post">
@@ -24,11 +21,11 @@
   export default {
     data () {
       return {
-        cat: null
+        spot: null
       }
     },
     mounted () {
-      this.cat = this.$root.cat.filter((cat) => cat['.key'] === this.$route.params.id)
+      this.spot = this.$route.params.picture
     }
   }
 </script>

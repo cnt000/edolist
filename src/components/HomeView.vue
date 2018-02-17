@@ -4,7 +4,7 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-        <div v-for="picture in this.getCats()" class="image-card" @click="displayDetails(picture['.key'])">
+        <div v-for="picture in this.getCats()" class="image-card" @click="displayDetails(picture)">
           <div class="image-card__picture">
             <img :src="picture.url" />
           </div>
@@ -59,8 +59,8 @@
 <script>
   export default {
     methods: {
-      displayDetails (id) {
-        this.$router.push({name: 'detail', params: { id: id }})
+      displayDetails (picture) {
+        this.$router.push({name: 'detail', params: { picture }})
       },
       getCats () {
         if (navigator.onLine) {
